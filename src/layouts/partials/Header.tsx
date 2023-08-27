@@ -8,6 +8,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect } from "react";
 import { IoSearch } from "react-icons/io5/index.js";
+import Authentication from "./Authentication";
+import { getServerSession } from "next-auth";
 
 //  child navigation link interface
 export interface IChildNavigationLink {
@@ -158,6 +160,7 @@ const Header = () => {
             </Link>
           )}
         </div>
+        <Authentication/>
       </nav>
     </header>
   );
